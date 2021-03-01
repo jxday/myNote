@@ -2,7 +2,7 @@
 
 >源代码、字节码、机器码、加载到内存、垃圾回收
 
-
+<img src="../../../../Library/Application%20Support/typora-user-images/image-20210218090423032.png" alt="image-20210218090423032" style="zoom:50%;" />
 
 ## 第二章	java虚拟机结构
 

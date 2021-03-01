@@ -6,9 +6,11 @@
 概述：
 List接口可调整大小的数组实现。实现所有可选的List操作，并允许所有元素，包括null，元素可重复。
 除了列表接口外，该类提供了一种方法来操作该数组的大小来存储该列表中的数组的大小。
+  
 时间复杂度：
 方法size、isEmpty、get、set、iterator和listIterator的调用是常数时间的。
 添加删除的时间复杂度为 O(N)。其他所有操作也都是线性时间复杂度。
+  
 容量：
 每个ArrayList都有容量，容量大小至少为List元素的长度，默认初始化为10。
 容量可以自动增长。
@@ -53,3 +55,27 @@ public boolean add(E e) //添加元素到末尾
   public E set(int index, E element) //修改指定位置的元素内容
 ```
 
+##### 如何实现数组和 List 之间的转换？
+
+- 数组转 List：使用 Arrays. asList(array) 进行转换。
+- List 转数组：使用 List 自带的 toArray() 方法。
+
+
+
+[ArrayList源码和多线程安全问题分析](https://cloud.tencent.com/developer/article/1156905)
+
+ArrayList中包含对共享变量操作的方法同样会有并发安全问题
+
+每次扩容1.5倍或者此次addAll之后的容量，最大容量Integer.MAX
+
+
+
+ArrayList的优点如下：
+
+- ArrayList 底层以数组实现，是一种随机访问模式。ArrayList 实现了 RandomAccess 接口，因此查找的时候非常快。
+- ArrayList 在顺序添加一个元素的时候非常方便。
+
+ArrayList 的缺点如下：
+
+- 删除元素的时候，需要做一次元素复制操作。如果要复制的元素很多，那么就会比较耗费性能。
+- 插入元素的时候，也需要做一次元素复制操作，缺点同上。
